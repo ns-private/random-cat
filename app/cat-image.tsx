@@ -1,10 +1,9 @@
 "use client";
- 
+
 import { useState } from "react";
+import Image from "next/image";
 import { fetchImage } from "./fetch-image";
-import styles from "./page.module.css"; // 追加
- 
-type CatImageProps = {
+import styles from "./cat-image.module.css";type CatImageProps = {
   url: string;
 };
  
@@ -23,7 +22,16 @@ export function CatImage({ url }: CatImageProps) {
         他のにゃんこも見る
       </button>
       <div className={styles.frame}>
-        {imageUrl && <img src={imageUrl} className={styles.img} />}
+        {imageUrl && (
+          <Image
+            src={imageUrl}
+            alt="ランダムな猫の画像"
+            width={500}
+            height={400}
+            className={styles.img}
+            priority
+          />
+        )}
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CatImage } from "./cat-image";
 import { fetchImage } from "./fetch-image";
 

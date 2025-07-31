@@ -3,7 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { fetchImage } from "./fetch-image";
-import styles from "./cat-image.module.css";type CatImageProps = {
+import styles from "./cat-image.module.css";
+
+type CatImageProps = {
   url: string;
 };
  
